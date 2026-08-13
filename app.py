@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from smolagents import CodeAgent, DuckDuckGoSearchTool, InferenceClientModel, tool, LiteLLMModel
+from smolagents import CodeAgent, DuckDuckGoSearchTool, tool, GradioUI
 from helpers.getActiveModel import get_active_model
 import datetime
 
@@ -57,5 +57,5 @@ agent.run("""
     If we start right now, at what time will the party be ready?
     """)
 
-agent.push_to_hub('Sushrut0703/AlfredAgent', token=HF_TOKEN)
-
+# agent.push_to_hub('Sushrut0703/AlfredAgent', token=HF_TOKEN)
+GradioUI(agent).launch()
