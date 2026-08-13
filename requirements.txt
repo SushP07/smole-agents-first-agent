@@ -1,0 +1,6 @@
+smolagents
+duckduckgo-search
+gradio
+python-dotenv
+google-genai
+litellm
